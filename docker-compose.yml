@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   proxy:
     image: jwilder/nginx-proxy
@@ -32,6 +30,7 @@ services:
       DEFAULT_EMAIL: danielsarmientoenterprise@gmail.com
     networks:
       - web
+
 
 volumes:
   vhost:

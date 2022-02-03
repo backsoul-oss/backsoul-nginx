@@ -1,3 +1,4 @@
+
 version: '3'
 
 services:
@@ -9,10 +10,10 @@ services:
       - VIRUTAL_POST=80
       - LETSENCRYPT_HOST=whoami.backsoul.xyz
       - LETSENCRYPT_EMAIL=danielsarmientoenterprise@gmail.com
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
       - web
 networks:
   web:
     external: true
+
+
