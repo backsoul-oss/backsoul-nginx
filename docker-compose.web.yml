@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  whoami:
+      image: jwilder/whoami
+      environment:
+        - VIRTUAL_HOST=whoami.backsoul.xyz
+        - VIRUTAL_POST=8000
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock:ro
+      networks:
+        - web
+networks:
+  web:
+    external: true
