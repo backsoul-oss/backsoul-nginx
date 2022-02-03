@@ -4,11 +4,11 @@ services:
   whoami:
     image: "traefik/whoami"
     container_name: "whoami"
-    ports:
-      - "80:8003"
     environment:
       - VIRTUAL_HOST=whoami.backsoul.xyz
-      - VIRUTAL_POST=8003
+      - VIRUTAL_POST=80
+      - LETSENCRYPT_HOST=whoami.backsoul.xyz
+      - LETSENCRYPT_EMAIL=danielsarmientoenterprise@gmail.com
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
@@ -16,4 +16,3 @@ services:
 networks:
   web:
     external: true
-
